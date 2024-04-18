@@ -118,7 +118,7 @@
 
 <html>
 <head>
-	<title>Emergence of Abstract State Representations in Embodied Sequence Modeling</title>
+	<title>Pre-trained Vision-Language Models Learn Discoverable Visual Concepts</title>
 	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
 	<meta property="og:title" content="Creative and Descriptive Paper Title." />
 	<meta property="og:description" content="Paper description." />
@@ -138,7 +138,7 @@
 <body>
 	<center>
 		<br>
-		<span style="font-size:36px "><b>Emergence of Abstract State Representations <br> in Embodied Sequence Modeling</b></span>
+		<span style="font-size:28px "><b>Pre-trained Vision-Language Models Learn Discoverable Visual Concepts</b></span>
 		<br>
 		<br>
 
@@ -147,23 +147,23 @@
 				<tr>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://tttyuntian.github.io/">Tian Yun</a>*</span>
+							<span style="font-size:24px"><a href="https://zangy17.github.io/">Yuan Zang</a></span>
 							<br>
 							<span style="font-size:16px">Brown University</span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://zilaiz.github.io/">Zilai Zeng</a>*</span>
+							<span style="font-size:24px"><a href="https://tttyuntian.github.io/">Tian Yun</a></span>
 							<br>
 							<span style="font-size:16px">Brown University</span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://kunhanda.github.io/">Kunal Handa</a></span>
+							<span style="font-size:24px"><a href="https://research.adobe.com/person/hao-tan/">Hao Tan</a></span>
 							<br>
-							<span style="font-size:16px">Brown University</span>
+							<span style="font-size:16px">Adobe Research</span>
 						</center>
 					</td>
 				</tr>
@@ -173,23 +173,9 @@
 				<tr>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=1JtHXbAAAAAJ&hl=en">Ashish V. Thapliyal</a></span>
+							<span style="font-size:24px"><a href="https://sites.google.com/site/trungbuistanford/">Trung Bui</a></span>
 							<br>
-							<span style="font-size:16px">Google Research</span>
-						</center>
-					</td>
-					<td align=center width=100px>
-						<center>
-							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=qCdLtIoAAAAJ&hl=en">Bo Pang</a></span>
-							<br>
-							<span style="font-size:16px">Google Research</span>
-						</center>
-					</td>
-					<td align=center width=100px>
-						<center>
-							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=sFyrSa8AAAAJ&hl=en">Ellie Pavlick</a></span>
-							<br>
-							<span style="font-size:16px">Brown University</span>
+							<span style="font-size:16px">Adobe Research</span>
 						</center>
 					</td>
 					<td align=center width=100px>
@@ -206,12 +192,12 @@
 				<tr>
 					<td align=center width=120px>
 						<center>
-							<div class="buttons" style="margin-bottom: 8px;"><a class="btn btn-primary" role="button" href="https://arxiv.org/abs/2311.02171">[Paper]</a></div>
+							<div class="buttons" style="margin-bottom: 8px;"><a class="btn btn-primary" role="button" href="https://placeholder">[Paper]</a></div>
 						</center>
 					</td>
 					<td align=center width=120px>
 						<center>
-							<div class="buttons" style="margin-bottom: 8px;"><a class="btn btn-primary" role="button" href="https://github.com/brown-palm/abstract-state-seqmodel">[Code]</a></div>
+							<div class="buttons" style="margin-bottom: 8px;"><a class="btn btn-primary" role="button" href="https://placeholder">[Code]</a></div>
 						</center>
 					</td>
 				</tr>
@@ -225,9 +211,7 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				Reinforcement learning via sequence modeling aims to mimic the success of language models, where actions taken by an embodied agent are modeled as tokens to predict. Despite their promising performance, it remains unclear if embodied sequence modeling leads to the emergence of internal representations that represent the environmental state information. A model that lacks abstract state representations would be liable to make decisions based on surface statistics which fail to generalize. We take the BabyAI environment, a grid world in which language-conditioned navigation tasks are performed, and build a sequence modeling Transformer, which takes a language instruction, a sequence of actions, and environmental observations as its inputs. In order to investigate the emergence of abstract state representations, we design a "blindfolded" navigation task, where only the initial environmental layout, the language instruction, and the action sequence to complete the task are available for training. 
-				<br><br>
-				Our probing results show that intermediate environmental layouts can be reasonably reconstructed from the internal activations of a trained model, and that language instructions play a role on the construction accuracy. Our results suggest that many key features of state representations can emerge via embodied sequence modeling, supporting an optimistic outlook for applications of sequence modeling objectives to more complex embodied decision-making domains.
+				Do vision-language models (VLMs) pre-trained to caption an image of a "durian" learn visual concepts such as "brown" (color) and "spiky" (texture) at the same time? We aim to answer this question as visual concepts learned "for free" would enable wide applications such as  neuro-symbolic reasoning or human-interpretable object classification. We assume that the visual concepts, if captured by pre-trained VLMs, can be extracted by their vision-language interface with text-based concept prompts. We observe that recent works prompting VLMs with concepts often differ in their strategies to define and evaluate the visual concepts, leading to conflicting conclusions. We propose a new concept definition strategy based on two observations: First, certain concept prompts include shortcuts that recognize correct concepts for wrong reasons; Second, multimodal information (e.g. visual discriminativeness, and textual knowledge) should be leveraged when selecting the concepts. Our proposed concept discovery and learning (CDL) framework is thus designed to identify a diverse list of generic visual concepts (e.g. "spiky"} as opposed to "spiky durian"), which are ranked and selected based on visual and language mutual information. We carefully design quantitative and human evaluations of the discovered concepts on six diverse visual recognition datasets, which confirm that pre-trained VLMs do learn visual concepts that provide accurate and thorough descriptions for the recognized objects. All code and models will be publicly released.
 			</td>
 		</tr>
 	</table>
@@ -241,13 +225,13 @@
 	</p>
 	<hr> -->
 
-	<center><h1>BabyAI</h1></center>
+	<center><h1>Do VLMs learn visual concepts?</h1></center>
 
 	<table align=center width=400px>
 		<center><tr>
 			<td align=center width=650px>
 				<center>
-					<img class="round" style="width:650px" src="./resources/babyai_illustration.png"/>
+					<img class="round" style="width:650px" src="./resources/category-conditional-concepts.png"/>
 				</center>
 			</td>
 		</tr></center>
@@ -256,15 +240,10 @@
 		<center>
 			<tr>
 				<td>
-					<br> We use the <a href="https://minigrid.farama.org/environments/babyai/index.html">BabyAI</a> environment as a testbed to investigate whether embodied sequence modeling leads to the emergence of abstract internal representations of the environment. The goal in this environment is to control an agent to navigate and interact in an <em>N</em> by <em>N</em> grid to follow the given language instructions (e.g., "go to the yellow key").
+					<br> Previous works demonstrated that concept-augmented prompts to improve the image recognition, which seemingly suggests that VLMs learn these concepts. However, we demonstrate that these concepts cannot provide conclusive evidence since certain "shortcuts" might bias the recognition results.
 
 					<br><br>
-					Above is a demonstration of a language-conditioned navigation task in BabyAI <em>GoToLocal</em> level where an agent (i.e., red triangle) needs to navigate to the target objects specified in the given instructions. This is an example trajectory where the agent achieves the goal of "go to the grey key": 
-					<ol type="A">
-						<li>The board is randomly initialized with the agent and 8 objects.</li>
-						<li>The agent navigates in the environment to try to approach the target object.</li>
-						<li>The agent keeps navigating until it reaches the target object.</li>
-					</ol>
+					When the category name is removed from the prompt (second column), the retrieved concepts are either non-visual or incorrect. We attribute this to the category name bias (third column), as the correct category can be retrieved by CLIP even when the paired descriptions are randomly shuffled and thus irrelevant.
 				</td>
 			</tr>
 		</center>
@@ -272,14 +251,14 @@
 
 	<br><hr>
 
-	<center><h1>Methods</h1></center>
+	<center><h1>Concept Discovery and Learning</h1></center>
 
 	<table align=center width=400px>
 		<tr>
 			<td align=center width=1000px>
 				<center>
-					<td><img class="round" style="width:600px" src="./resources/sequece_model_architecture.png"/></td>
-					<td><img class="round" style="width:400px" src="./resources/probing_pipeline.png"/></td>
+					<td><img class="round" style="width:600px" src="./resources/cd.png"/></td>
+
 				</center>
 			</td>
 		</tr>
@@ -288,20 +267,30 @@
 		<center>
 			<tr>
 				<td>
-					We build our embodied sequence modeling framework with a Transformer-based architecture, in which we can process heterogeneous data (e.g. natural language instructions, states and actions) as sequences and autoregressively model the state-action trajectories with causal attention masks.
-					<br><br>
-					Once we have models trained to perform a language-conditioned navigation task, we train simple classifiers as probes to explore whether the internal activations of a trained model contain representations of abstract environmental states (e.g., current board layouts). If the trained probes can accurately reconstruct the current state when it is not explicitly given to the model, it suggests that abstract state representations can emerge during model's pretraining. 
-					<br><br>
-					We introduce two sequence modeling setups in BabyAI, namely the <b>Regular setup</b> and the <b>Blindfolded setup</b>. 
-					<ul>
-						<li><b>Regular Setup</b>: The objective is to predict next actions based on all the information at the current and the previous steps provided explicitly including intermediate states which are computed using the BabyAI environment.</li>
-						<li><b>Blindfolded Setup</b>: The objective is to predict next actions based on the language instruction, prior actions, and only the initial state. By comparing state reconstruction task and task completion performance of this setup against the regular setup, we hope to gain insights into whether these sequence models are able to internally reconstruct the intermediate states implicitly in order to determine the right next actions to take. </li>
-					</ul>
+					We propose a new concept discovery strategy to eliminate the shortcuts and utilize both visual and language information, in order to properly investigate the concepts in pre-trained VLMs. We first use a large and diverse image captioning dataset~\cite{sharma2018conceptual} as a source of objects to discover diverse and thorough visual concepts shared by multiple objects. We then rank and select the visual concepts based on multimodal information: Given a collection of images and their text descriptions, we prefer the visual concepts that can be both reliably recognized from the images (e.g., with a pre-trained VLM), and deemed as suitable descriptions based on the text descriptions (e.g., according to the prior knowledge encoded by an LLM).
 				</td>
 			</tr>
 		</center>
 	</table>
-	
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=1000px>
+				<center>
+					<td><img class="round" style="width:600px" src="./resources/cl.png"/></td>
+
+				</center>
+			</td>
+		</tr>
+	</table>
+	<table align=center width=850px>
+		<center>
+			<tr>
+				<td>
+					We assume that the vision-language pre-training learns powerful encoders for recognizing visual concepts, but visual concept recognition can be further improved by ``re-aligning'' the image-text interface. Hence, we propose a self-supervised concept learning framework. We construct a fixed concept-category association matrix with the help of the LLM. We then fine-tune only the linear projection layers of the VLM through the concept bottleneck, by asking it to justify its own prediction: Namely, the classification objective is obtained by asking the VLM to perform zero-shot object classification.
+				</td>
+			</tr>
+		</center>
+	</table>
 	<hr>
 
 	<center><h1>Results</h1></center>
@@ -310,11 +299,7 @@
 		<center>
 			<tr>
 				<td>
-					We train a sequence model which simulates the regular setup and blindfolded setup of sequence modeling in BabyAI, named as <em>Complete-State Model</em> and <em>Missing-State Model</em> respectively. 
-					<br>
-					<em>Randomly initialized baseline</em> is a probe trained on a sequence model with random weights.
-					<br>
-					<em>Initial state baseline</em> to always predict the initial state, without considering the actions taken by the agent. 
+					We evaluate the proposed concept discovery method by building Concept Bottleneck Models for image classification tasks, comparing with previous works LaBo and LM4CV. We also evaluate the quality of concepts discovered and learned by the proposed CDL framework.
 				</td>
 			</tr>
 		</center>
@@ -325,7 +310,7 @@
 		<center>
 			<tr>
 				<td>
-					<b>1. Role of Intermediate State Observations in the Emergence of State Representations</b>
+					<b>1. Concept-based Image Classification</b>
 				</td>
 			</tr>
 		</center>
@@ -334,7 +319,7 @@
 		<tr>
 			<td align=center width=1000px>
 				<center>
-					<td><img class="round" style="width:600px" src="./resources/gotolocal_roles_of_states.png"/></td>
+					<td><img class="round" style="width:600px" src="./resources/classification.png"/></td>
 				</center>
 			</td>
 		</tr>
@@ -343,8 +328,7 @@
 		<center>
 			<tr>
 				<td>
-					We perform probing on the internal activations of a pretrained Complete-State model and a pretrained Missing-State model.
-					For Complete-State model, while the current state is explicitly fed to the model as part of its input, the poor performance of the randomly initialized weights confirms that this information is not trivially preserved in its internal activations - the model needs to be properly pretrained for that to happen. For Missing-State model, even though the current states are not explicitly given, they can be reconstructed reasonably well from the model's internal representations.
+					Our concept discovery method consistently outperforms the baseline methods on all datasets with the same concept bottleneck sizes.
 				</td>
 			</tr>
 		</center>
@@ -356,7 +340,7 @@
 		<center>
 			<tr>
 				<td>
-					<b>2. Role of Language Instructions in the Emergence of State Representations</b>
+					<b>2. Evaluation of the Discovered and Learned Concepts</b>
 				</td>
 			</tr>
 		</center>
@@ -365,7 +349,7 @@
 		<tr>
 			<td align=center width=1000px>
 				<center>
-					<td><img class="round" style="width:600px" src="./resources/gotolocal_roles_of_instructions.png"/></td>
+					<td><img class="round" style="width:600px" src="./resources/quality.png"/></td>
 				</center>
 			</td>
 		</tr>
@@ -374,53 +358,48 @@
 		<center>
 			<tr>
 				<td>
-					To study how language instructions impact the emergence of internal representations of states, we pretrain a Complete-State model and a Missing-State model without passing in language instructions. 
-					When the language instruction is absent during pretraining, the models struggle to recover state information as accurately as the models trained with language instructions, which reflects that language instructions play an important role in the emergence of internal state representations.
+					We perform automatic and human evaluation to measure the interpretability, precision and thoroughness of the discovered and learned concepts in our framework. The results show that our CDL framework provides significant improvements on the quality of concepts. The consistently high quality of the discovered and learned concepts also suggests that VLMs do learn visual concepts during pre-training.
 				</td>
 			</tr>
 		</center>
 	</table>
 	
-	<br>
-	
-	<table align=center width=850px>
-		<center>
-			<tr>
-				<td>
-					<b>3. Blindfolded Navigation Performance</b>
-				</td>
-			</tr>
-		</center>
+	<center><h1>Examples of Concept-based Recognition of the CDL Framework</h1></center>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=1000px>
+				<center>
+					<td><img class="round" style="width:600px" src="./resources/visual0.pdf"/></td>
+				</center>
+			</td>
+		</tr>
 	</table>
 	<table align=center width=400px>
 		<tr>
 			<td align=center width=1000px>
 				<center>
-					<td><img class="round" style="width:600px" src="./resources/gotolocal_navigation_performance.png"/></td>
+					<td><img class="round" style="width:600px" src="./resources/visual_1.pdf"/></td>
 				</center>
 			</td>
 		</tr>
 	</table>
-	<table align=center width=850px>
-		<center>
-			<tr>
-				<td>
-					We further explore the practical implications of the emergence of internal state representations by evaluating pretrained Complete- and Missing-State models on GoToLocal. 
-					We observe that Missing-State model performs competitively against Complete-State model, even though Missing-State model only has access to the non-initial/last states during its training. This aligns with our expectation that a model which learns internal representations of states can utilize such representations to predict next actions. 
-				</td>
-			</tr>
-		</center>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=1000px>
+				<center>
+					<td><img class="round" style="width:600px" src="./resources/visual_2.pdf"/></td>
+				</center>
+			</td>
+		</tr>
 	</table>
-	
-	<br><hr>
 
 	<table align=center width=650px>
 		<center><h1>Paper and BibTex</h1></center>
 		<tr>
 			<td><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></td>
-			<td><span style="font-size:14pt">Tian Yun*, Zilai Zeng*, Kunal Handa, Ashish V. Thapliyal, Bo Pang, Ellie Pavlick, Chen Sun.<br>
-				<b>Emergence of Abstract State Representations in Embodied Sequence Modeling</b><br>
-				In EMNLP 2023.<br>
+			<td><span style="font-size:14pt">Yuan Zang, Tian Yun, Hao Tan, Trung Bui, Chen Sun.<br>
+				<b>Pre-trained Vision-Language Models Learn Discoverable Concepts</b><br>
+				arXiv<br>
 				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
 				<span style="font-size:4pt"><a href=""><br></a>
 				</span>
@@ -434,12 +413,7 @@
 			<tr>
 				<td style="background-color:#e1e1e1">
 					<pre><code>
-  @inproceedings{yun2023emergence,
-	title={Emergence of Abstract State Representations in Embodied Sequence Modeling},
-	author={Tian Yun and Zilai Zeng and Kunal Handa and Ashish V Thapliyal and Bo Pang and Ellie Pavlick and Chen Sun},
-	booktitle={Proceedings of the Conference on Empirical Methods in Natural Language Processing},
-	year={2023}
-  }
+  Todo after arXiv
 					</code></pre>
 				</td>
 			</tr>
@@ -454,8 +428,7 @@
 			<td width=400px>
 				<left>
 					<center><h1>Acknowledgements</h1></center>
-					We would like to thank the anonymous reviewers for their detailed and constructive comments. We are very grateful to Xi Chen, Sebastian Goodman, and Radu Soricut for useful discussions . We appreciate Kenneth Li for helpful feedback on probing experiments and further conversation about potentials of the project. We thank Haotian Fu, Apoorv Khandelwal, Michael Lepori, Calvin Luo, and Jack Merullo for the help on the project. Part of the work was done while Tian Yun was a student researcher at Google Research. This project is in part supported by Samsung Advanced Institute of Technology, and a Richard B. Salomon Faculty Research Award for C.S.
-
+					This work is in part supported by a gift from Adobe Research and a Richard B. Salomon award for Chen Sun. We thank helpful discussions with Professors Ellie Pavlick and Stephen Bach. We thank Yue Yang, An Yang, Yu Wang for providing the open-sourced code for the baselines.
 					<br><br>
 					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
 				</left>
